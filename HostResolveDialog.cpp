@@ -12,3 +12,11 @@ HostResolveDialog::~HostResolveDialog()
 {
     delete ui;
 }
+
+
+void HostResolveDialog::on_buttonBox_accepted()
+{
+    emit hostResolveSignal(ui->textEdit->toPlainText());
+    ui->textEdit->clear();
+    hide();
+}

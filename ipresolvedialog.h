@@ -22,8 +22,7 @@ private:
     Ui::ipResolveDialog *ui;
 
 signals:
-    void ipResolveSignal(const String ip);
-
+    void ipResolveSignal(const QString ip);
 
 };
 

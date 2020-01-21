@@ -17,6 +17,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     HostResolveDialog.cpp \
+    PortResolveDialog.cpp \
+    ServiceResolveDialog.cpp \
     ipresolvedialog.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -24,12 +26,16 @@ SOURCES += \
 
 HEADERS += \
     HostResolveDialog.h \
+    PortResolveDialog.h \
+    ServiceResolveDialog.h \
     ipresolvedialog.h \
     mainwindow.h \
     winsock.h
 
 FORMS += \
     HostResolveDialog.ui \
+    PortResolveDialog.ui \
+    ServiceResolveDialog.ui \
     ipresolvedialog.ui \
     mainwindow.ui
 

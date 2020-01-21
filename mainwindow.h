@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include "ipresolvedialog.h"
+#include "HostResolveDialog.h"
+#include "PortResolveDialog.h"
+#include "ServiceResolveDialog.h"
+
 #include "winsock.h"
 
 QT_BEGIN_NAMESPACE
@@ -16,18 +20,27 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void writeToScreen(String str);
+    void writeToScreen(QString str);
 
 
 private slots:
     void on_actionHost_IP_triggered();
+    void on_actionIP_Host_triggered();
+    void on_actionPort_Service_triggered();
+    void on_actionService_Port_triggered();
 
-    void ipResolve(String ip);
+    void ipResolve(QString ip);
+    void hostResolve(QString host);
+    void portResolve(QString port, QString connection);
+    void serviceResolve(QString service, QString connection);
 
 private:
     WinSock *winsock;
-    ipResolveDialog *ipDialog;
 
+    ipResolveDialog *ipDialog;
+    HostResolveDialog *hostDialog;
+    ServiceResolveDialog *serviceDialog;
+    PortResolveDialog *portDialog;
 
     Ui::MainWindow *ui;
 };
