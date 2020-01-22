@@ -27,7 +27,6 @@ SOURCES += \
 HEADERS += \
     HostResolveDialog.h \
     PortResolveDialog.h \
-    ResolveDialog.h \
     ServiceResolveDialog.h \
     ipresolvedialog.h \
     mainwindow.h \

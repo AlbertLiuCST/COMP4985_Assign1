@@ -3,10 +3,10 @@
 
 #include <QDialog>
 
+
 namespace Ui {
 class HostResolveDialog;
 }
-
 class HostResolveDialog : public QDialog
 {
     Q_OBJECT
