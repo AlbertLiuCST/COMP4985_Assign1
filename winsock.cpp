@@ -1,5 +1,46 @@
 #include "winsock.h"
-
+/*------------------------------------------------------------------------------------------------------------------
+-- SOURCE FILE: WinSock - Interface for resolving using winsock2
+--
+-- PROGRAM: COMP_4985Assign1
+--
+-- FUNCTIONS:
+--  QString ipToHost(QString ip)
+--  QString hostToIp(QString host)
+--  QString portToService(QString port, QString connection)
+--  QString serviceToPort(QString service, QString connection);void on_buttonBox_accepted()
+--
+--
+-- DATE: January 21, 2020
+--
+-- REVISIONS: (Date and Description)
+--
+-- DESIGNER: Albert Liu
+--
+-- PROGRAMMER: Albert Liu
+--
+-- NOTES:
+-- WinSock is acts as an interface between Dialogs and
+-- Dialog is used to grab service,connection and then passes it back to mainwindow to resolve to portnumber through winsock
+----------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------
+-- FUNCTION: ServiceResolveDialog
+--
+-- DATE: January 21, 2020
+--
+-- REVISIONS: (Date and Description)
+--
+-- DESIGNER: Albert Liu
+--
+-- PROGRAMMER: Albert Liu
+--
+-- INTERFACE: ServiceResolveDialog(QWidget *parent)
+--
+-- RETURNS: ServiceResolveDialog(QWidget *parent)
+--
+-- NOTES:
+-- Default Constructor for ServiceResolveDialog
+----------------------------------------------------------------------------------------------------------------------*/
 WinSock::WinSock()
 {
     WORD wVersionRequested = MAKEWORD(2,2);
