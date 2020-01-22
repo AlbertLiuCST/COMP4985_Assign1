@@ -215,9 +215,11 @@ QString WinSock::serviceToPort(QString service, QString connection)
     struct servent *sv;
     QString str = "Port Number : ";
     sv = getservbyname(service.toStdString().c_str(), connection.toStdString().c_str());
-    short port = ntohs(sv->s_port);
+
     if (sv == NULL)
         return "";
-    else
-        return str.append(port);
+    else {
+        short port = ntohs(sv->s_port);
+        return str.append(QString::number(port));
+    }
 }
